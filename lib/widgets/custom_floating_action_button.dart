@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:notes/constants.dart';
 import 'package:notes/widgets/add_notes.dart';
 
 class CustomFloatingActionButton extends StatelessWidget {
@@ -10,7 +11,7 @@ class CustomFloatingActionButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return FloatingActionButton(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(40)),
-      backgroundColor: const Color.fromARGB(255, 102, 218, 205),
+      backgroundColor: kPrimeColor,
       onPressed: () {
         showModalBottomSheet(
           shape: RoundedRectangleBorder(
