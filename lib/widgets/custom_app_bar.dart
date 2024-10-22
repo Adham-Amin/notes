@@ -3,10 +3,11 @@ import 'package:notes/widgets/custom_serach_icon.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({
-    super.key, required this.title, required this.icon,
+    super.key, required this.title, required this.icon, this.onPressed,
   });
   final String title;
   final Icon icon;
+  final Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -16,7 +17,7 @@ class CustomAppBar extends StatelessWidget {
           title,
           style: const TextStyle(fontSize: 32),
         ),
-        CustomSearchIcon(icon: icon,),
+        CustomSearchIcon(icon: icon, onPressed: onPressed,),
       ],
     );
   }

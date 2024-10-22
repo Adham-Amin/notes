@@ -10,7 +10,11 @@ class CustomNoteItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => const EditNoteView())),
+      onTap: () => Navigator.of(context).push(
+        MaterialPageRoute(
+          builder: (context) => EditNoteView(notes: notes,),
+        ),
+      ),
       child: Container(
         margin: const EdgeInsets.symmetric(vertical: 4),
         padding: const EdgeInsets.only(left: 16, top: 24, bottom: 24),
@@ -22,7 +26,7 @@ class CustomNoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title:  Text(
+              title: Text(
                 notes.title,
                 style: const TextStyle(
                   fontSize: 26,
